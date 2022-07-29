@@ -7,7 +7,7 @@
    {% if provider.id == "openid" %}
    {% for brand in provider.get_brands %}
       <a class="flex items-center self-stretch justify-center h-12 mt-3 text-white uppercase rounded bg-stone-900 hover:bg-black"
-        href="{% provider_login_url provider.id  openid=brand.openid_url process=process  %}">{{brand.name}}</a>
+        href="{% provider_login_url provider.id  openid=brand.openid_url process=process %}">{{brand.name}}</a>
    {% endfor %}
    {% endif %}
       <a class="flex items-center justify-center h-12 mt-3 text-white uppercase self-stretch rounded {{ provider | socialprovider_color }}"
